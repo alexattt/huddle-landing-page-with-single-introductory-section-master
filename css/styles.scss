@@ -87,6 +87,9 @@ main {
   margin-bottom: 50px;
 
   .illustration {
+    @media screen and (min-width: 1090px) {
+      animation: appear 0.5s ease-in-out backwards;
+    }
   }
 
   .info-container {
@@ -145,6 +148,10 @@ main {
       margin-left: 0px;
     }
 
+    @media screen and (min-width: 1090px) {
+      animation: appear 0.5s 0.5s ease-in-out backwards;
+    }
+
     @media screen and (max-width: 768px) {
       align-items: center;
     }
@@ -173,5 +180,31 @@ main {
     &:hover {
       color: $soft-magenta;
     }
+  }
+
+  @media screen and (min-width: 1090px) {
+    animation: slide-up 0.8s 1s ease-in-out backwards;
+  }
+}
+
+/*** ANIMATIONS ***/
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
   }
 }

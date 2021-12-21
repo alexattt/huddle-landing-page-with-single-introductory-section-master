@@ -107,6 +107,13 @@ main {
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 1090px) {
+  .hero-container .illustration {
+    -webkit-animation: appear 0.5s ease-in-out backwards;
+            animation: appear 0.5s ease-in-out backwards;
+  }
+}
+
 .hero-container .info-container {
   margin-left: 50px;
 }
@@ -174,6 +181,13 @@ main {
   }
 }
 
+@media screen and (min-width: 1090px) {
+  .hero-container .info-container {
+    -webkit-animation: appear 0.5s 0.5s ease-in-out backwards;
+            animation: appear 0.5s 0.5s ease-in-out backwards;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero-container .info-container {
     -webkit-box-align: center;
@@ -213,5 +227,52 @@ main {
 
 .social-media-icons ion-icon:hover {
   color: #e882e8;
+}
+
+@media screen and (min-width: 1090px) {
+  .social-media-icons {
+    -webkit-animation: slide-up 0.8s 1s ease-in-out backwards;
+            animation: slide-up 0.8s 1s ease-in-out backwards;
+  }
+}
+
+/*** ANIMATIONS ***/
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
