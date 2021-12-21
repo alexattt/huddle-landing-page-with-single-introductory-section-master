@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/***** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ *****/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/***** main styles *****/
+html {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #674baf;
+  padding: 50px 100px 100px 90px;
+}
+
+@media screen and (max-width: 1090px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 50px 70px 70px 90px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  main {
+    background-image: url(../images/bg-mobile.svg);
+    padding: 50px;
+  }
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1090px) {
+  .logo {
+    margin-bottom: 50px;
+  }
+}
+
+.hero-container {
+  min-height: 50vh;
+  margin-bottom: 50px;
+}
+
+.hero-container .info-container {
+  margin-left: 50px;
+}
+
+.hero-container .info-container .title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container .info-container .title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero-container .info-container .title {
+    font-size: 1.25rem;
+  }
+}
+
+.hero-container .info-container .desc {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .hero-container .info-container .desc {
+    font-size: 0.9rem;
+    line-height: 30px;
+    opacity: 0.9;
+  }
+}
+
+.hero-container .info-container .register-btn {
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  width: 150px;
+  padding: 12px 15px;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  color: #674baf;
+  cursor: pointer;
+  -webkit-box-shadow: -1px 3px 25px -5px rgba(33, 7, 90, 0.75);
+          box-shadow: -1px 3px 25px -5px rgba(33, 7, 90, 0.75);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.hero-container .info-container .register-btn:hover {
+  background-color: #e882e8;
+  color: white;
+}
+
+@media screen and (max-width: 1090px) {
+  .hero-container .info-container {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container .info-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .hero-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    text-align: center;
+  }
+}
+
+.social-media-icons {
+  float: right;
+  color: white;
+  gap: 20px;
+}
+
+.social-media-icons ion-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+
+.social-media-icons ion-icon:hover {
+  color: #e882e8;
+}
+/*# sourceMappingURL=styles.css.map */
